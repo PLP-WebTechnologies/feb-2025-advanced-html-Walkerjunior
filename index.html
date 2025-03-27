@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Advanced HTML5 Elements and Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        img {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+        .form-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Advanced HTML5 Elements and Forms</h1>
+
+    <!-- Ordered List with Roman Numerals -->
+    <h2>Steps to Complete the Task:</h2>
+    <ol type="I">
+        <li>Prepare the environment for HTML coding.</li>
+        <li>Write the HTML structure with semantic elements.</li>
+        <li>Incorporate multimedia and interactive elements.</li>
+        <li>Test the form validation and input types.</li>
+        <li>Submit the final work for review.</li>
+    </ol>
+
+    <!-- External Image from Pexels -->
+    <h2>External Image from Pexels</h2>
+    <img src="https://images.pexels.com/photos/1383645/pexels-photo-1383645.jpeg" alt="Beautiful landscape from Pexels">
+
+    <!-- Table of Contacts -->
+    <h2>Contact List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Mobile</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sally Woka</td>
+                <td>123 Elm Street, Uganda</td>
+                <td>(254) 712-168-696</td>
+                <td>sallywoka@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Stacy Akinyi</td>
+                <td>456 Manyanja Road, Umoja</td>
+                <td>(254) 758-501-087</td>
+                <td>stacyakinyi2021@gmail.com</td>
+            </tr>
+            <tr>
+                <td>David Woka</td>
+                <td>456 Spine Road, Komarocks</td>
+                <td>(254) 714-394-247</td>
+                <td>walkerjunior92@yahoo.com</td>
+            </tr>
+            <tr>
+                <td>Mary Mbogo Green</td>
+                <td>101 Rongo Town, Rongo</td>
+                <td>(254) 729-777-716</td>
+                <td>marymbogo@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Sarah Achieng</td>
+                <td>202 Birch Boulevard, Kiserian</td>
+                <td>(254) 798-078-095</td>
+                <td>sarayusuf@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Registration Form -->
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form action="#" method="POST" id="registrationForm">
+            <!-- Name Input -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+            <!-- Email Input -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter a secure password" required><br><br>
+
+            <!-- Date Input -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <!-- Dropdown -->
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <!-- Radio Buttons -->
+            <label>Newsletter Subscription:</label><br>
+            <input type="radio" id="subscribeYes" name="subscribe" value="yes" required>
+            <label for="subscribeYes">Yes</label><br>
+            <input type="radio" id="subscribeNo" name="subscribe" value="no" required>
+            <label for="subscribeNo">No</label><br><br>
+
+            <!-- Checkboxes -->
+            <label for="terms">Agree to Terms and Conditions:</label>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree</label><br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Registration</button>
+        </form>
+    </div>
+
+    <script>
+        // Simple form validation for 
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (!name || !email || !password) {
+                alert('Please fill out all required fields.');
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
